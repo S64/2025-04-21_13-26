@@ -66,6 +66,14 @@ dependencies {
      * `media3-ui` has a Layout XML named with `exo_player_view.xml`, but doesn't have `exo_styled_player_view.xml`.
      * - https://github.com/androidx/media/blob/839c4a90/libraries/ui/src/main/res/layout/exo_player_view.xml
      * - https://github.com/androidx/media/tree/839c4a90/libraries/ui/src/main/res/layout
+     * In Android, if resources with the same name exist, the resource owned by the module with the higher priority is used.
+     * Therefore, `exo_player_view.xml` may be overwritten by resource provided by `media3-ui`.
+     * > Avoid resource merge conflicts.
+     * > The build tools merge resources from a library module with those of a dependent app module. If a given resource name is defined in both modules, the resource from the app is used.
+     * > If conflicts occur between multiple AAR libraries, then the resource from the library listed first in the dependencies list (closest to the top of the dependencies block) is used.
+     * > To avoid resource conflicts, consider using a prefix or other consistent naming scheme that is unique to the module (or is unique across all project modules).
+     * > https://developer.android.com/studio/projects/android-library#Considerations
+     * So
      */
     implementation(libs.bundles.media3)
 
