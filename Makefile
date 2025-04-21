@@ -1,4 +1,4 @@
-.PHONY:
+.PHONY: prerequisites
 prerequisites:
 	test -n "$(EP2BASEDLIB_VERSION)"
 
