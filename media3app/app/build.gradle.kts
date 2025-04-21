@@ -62,6 +62,11 @@ dependencies {
     //noinspection UseTomlInstead
     styledImplementation("jp.s64.example.ep2basedlib:styled:${getArtifactVersion()}")
 
+    /**
+     * `media3-ui` has a Layout XML named with `exo_player_view.xml`, but doesn't have `exo_styled_player_view.xml`.
+     * - https://github.com/androidx/media/blob/839c4a90/libraries/ui/src/main/res/layout/exo_player_view.xml
+     * - https://github.com/androidx/media/tree/839c4a90/libraries/ui/src/main/res/layout
+     */
     implementation(libs.bundles.media3)
 
     testImplementation(libs.junit)
