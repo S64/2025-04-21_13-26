@@ -6,7 +6,7 @@ jobs:
       fail-fast: false
       matrix:
         apiLevel:
-          - 35
+          - 34
         target:
           - test-app-legacy
           - test-app-styled
