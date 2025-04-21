@@ -73,7 +73,6 @@ dependencies {
      * > If conflicts occur between multiple AAR libraries, then the resource from the library listed first in the dependencies list (closest to the top of the dependencies block) is used.
      * > To avoid resource conflicts, consider using a prefix or other consistent naming scheme that is unique to the module (or is unique across all project modules).
      * > https://developer.android.com/studio/projects/android-library#Considerations
-     * So
      */
     implementation(libs.bundles.media3)
 
