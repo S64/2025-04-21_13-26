@@ -6,7 +6,9 @@ jobs:
       fail-fast: false
       matrix:
         apiLevel:
-          - 33
+          - 35
+        arch:
+          - x86_64
         target:
           - test-app-legacy
           - test-app-styled
@@ -24,4 +26,5 @@ jobs:
       - uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: ${{ matrix.apiLevel}}
+          arch: ${{ matrix.arch }}
           script: make ${{ matrix.target }}
